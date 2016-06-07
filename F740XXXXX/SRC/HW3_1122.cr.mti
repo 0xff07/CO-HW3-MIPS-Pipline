@@ -58,30 +58,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	HDU
 
-} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/ID_EX.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/testfixture1.v
+} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/ID_EX.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/ID_EX.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module IM
--- Compiling module DM
--- Compiling module PC
--- Compiling module ADD
--- Compiling module IF_ID
--- Compiling module HDU
--- Compiling module Controller
--- Compiling module Registers
--- Compiling module sign_extend
--- Compiling module Mux2to1
 -- Compiling module ID_EX
--- Compiling module Mux4to1
--- Compiling module Jump_Ctrl
--- Compiling module FU
--- Compiling module ALU
--- Compiling module EX_M
--- Compiling module M_WB
--- Compiling module top
--- Compiling module testfixture1
 
 Top level modules:
-	testfixture1
+	ID_EX
 
 } {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/Mux4to1.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/Mux4to1.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -153,11 +135,59 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	ADD
 
-} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/FU.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/FU.v
+} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/top.v {2 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/top.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+** Warning: (vlog-6) -- Waiting for lock by "modelsim@MODELSIM-PC, pid = 1564
+". Lockfile is "//VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/HW3_1122/_lock".
+
 -- Compiling module FU
 
 Top level modules:
 	FU
+-- Compiling module PC
+-- Compiling module ADD
+-- Compiling module IF_ID
+-- Compiling module HDU
+-- Compiling module Controller
+-- Compiling module Registers
+-- Compiling module sign_extend
+-- Compiling module Mux2to1
+-- Compiling module ID_EX
+-- Compiling module Mux4to1
+-- Compiling module Jump_Ctrl
+-- Compiling module FU
+-- Compiling module ALU
+-- Compiling module EX_M
+-- Compiling module M_WB
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/FU.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/testfixture1.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IM
+-- Compiling module DM
+-- Compiling module PC
+-- Compiling module ADD
+-- Compiling module IF_ID
+-- Compiling module HDU
+-- Compiling module Controller
+-- Compiling module Registers
+-- Compiling module sign_extend
+-- Compiling module Mux2to1
+-- Compiling module ID_EX
+-- Compiling module Mux4to1
+-- Compiling module Jump_Ctrl
+-- Compiling module FU
+-- Compiling module ALU
+-- Compiling module EX_M
+-- Compiling module M_WB
+-- Compiling module top
+-- Compiling module testfixture1
+
+Top level modules:
+	testfixture1
 
 } {} {}}
