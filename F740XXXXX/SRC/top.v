@@ -68,7 +68,13 @@ module top ( clk,
 	  		wire IF_Flush;
 	  		wire ID_Flush;
 	
-	
+			//input section //
+			wire [4:0] ID_Rs;
+			wire [4:0] ID_Rt;
+			//wire [4:0] EX_WR_out;
+			//wire EX_MemtoReg;
+			//wire [1:0] EX_JumpOP;
+			//end input section//
 	
 	
 	/*-----------------------------------------------------*/
@@ -130,7 +136,34 @@ module top ( clk,
 	  		wire [4:0] EX_WR_out;
 	  		wire [4:0] EX_Rs;
 	  		wire [4:0] EX_Rt;
+
+
+
+			// input section //
+			//wire ID_Flush;
 	
+			// WB
+			wire ID_MemtoReg;
+			wire ID_RegWrite;
+			// M
+			wire ID_MemWrite;
+			wire ID_Jal;
+			// EX
+			wire ID_Reg_imm;
+			wire ID_Jump;
+			wire ID_Branch;
+			wire ID_Jr;		
+			// pipe
+    	    //wire [pc_size-1:0] ID_PC;
+    		wire [3:0] ID_ALUOp;
+    		wire [4:0] ID_shamt;
+    		wire [data_size-1:0] ID_Rs_data;
+    		wire [data_size-1:0] ID_Rt_data;
+    		wire [data_size-1:0] ID_se_imm;
+    		wire [4:0] ID_WR_out;
+    		//wire [4:0] ID_Rs;
+    		//wire [4:0] ID_Rt;
+			// end input section //
 	
 	
 	
@@ -141,6 +174,15 @@ module top ( clk,
 	wire [1:0] EX_JumpOP;
 	wire [pc_size-1:0] PCin;
 	
+    		// input section //
+			//wire Branch;
+    		wire Zero;
+    		//wire Jr;
+    		//wire Jump;
+			wire [1:0] JumpOP;
+			// end input section //
+
+
 	// Forwarding Unit part
 	/*please declare the wire used for forwarding unit here*/
 	/*-----------------------------------------------------*/	
@@ -148,6 +190,14 @@ module top ( clk,
       		wire enF2;
      		wire sF1;
      		wire sF2;
+
+			//input section //
+			//wire [4:0] EX_Rs;
+    		//wire [4:0] EX_Rt;
+    		//wire M_RegWrite;
+    		//wire [4:0] M_WR_out;
+    		//wire WB_RegWrite;
+    		//wire [4:0] WB_WR_out;
 
 	
 	/*-----------------------------------------------------*/
@@ -160,6 +210,15 @@ module top ( clk,
 	wire [data_size-1:0] scr2;	
 	wire [data_size-1:0] EX_ALU_result;
 	wire EX_Zero;
+
+			//input section//
+			//wire [3:0] ALUOp;
+			wire [data_size-1:0] scr1;
+			//wire [data_size-1:0] scr2;
+			//wire [4:0] shamt;
+
+
+
 	
 	// PCplus4 adder used for Jal
 	/*please declare the wire used for PCplus4 Adder (at EX stage)*/
@@ -186,6 +245,22 @@ module top ( clk,
 			wire [pc_size-1:0] M_PCplus8;
 	 		wire [4:0] M_WR_out;
 	
+
+			// input section //
+			// WB		  
+			//wire EX_MemtoReg;
+    		//wire EX_RegWrite;
+    		// M
+   			//wire EX_MemWrite;
+			//wire EX_Jal;
+			// pipe		  
+			//wire [data_size-1:0] EX_ALU_result;
+    		//wire [data_size-1:0] EX_Rt_data;
+    		wire [pc_size-1:0] EX_PCplus8;
+    		//wire [4:0] EX_WR_out;
+
+
+			// end input section //
 	
 	
 	/*-----------------------------------------------------*/
@@ -204,6 +279,19 @@ module top ( clk,
       		wire [data_size-1:0] WB_DM_Read_Data;
       		wire [data_size-1:0] WB_WD_out;
       		wire [4:0] WB_WR_out;
+
+
+			// input section //
+
+			// WB
+    		//wire M_MemtoReg;	
+    		//wire M_RegWrite;	
+			// pipe
+    		wire [data_size-1:0] M_DM_Read_Data;
+    		//wire [data_size-1:0] M_WD_out;
+    		//wire [4:0] M_WR_out;
+
+			// end input section //  
 	
 	
 	/*-----------------------------------------------------*/
@@ -404,8 +492,8 @@ module top ( clk,
 	// Jump Part
 	// Adder - Branch address adder
 	ADD#(pc_size) ADD_Branch ( 
-	.A(PCout/*please fill here*/),
-	.B(imm << 2/*please fill here*/),
+	.A(EX_PC/*please fill here*/),
+	.B(se_imm << 2/*please fill here*/),
 	.Cout(BranchAddr)
 	);
 	
@@ -480,7 +568,7 @@ module top ( clk,
 	// Mux - select Rt or imm (the Rt part)
 	Mux2to1#(data_size) Rt_imm (
 	.I0(enF2_data),
-	.I1(imm/*please fill here*/),
+	.I1(se_imm/*please fill here*/),
 	.S(Reg_imm/*please fill here*/),
 	.out(scr2)
 	);	
