@@ -257,6 +257,7 @@ module top ( clk,
 			//wire [data_size-1:0] EX_ALU_result;
     		//wire [data_size-1:0] EX_Rt_data;
     		wire [pc_size-1:0] EX_PCplus8;
+
     		//wire [4:0] EX_WR_out;
 
 
@@ -280,6 +281,8 @@ module top ( clk,
       		wire [data_size-1:0] WB_WD_out;
       		wire [4:0] WB_WR_out;
 
+			wire [data_size-1:0] M_PCplus8_32bit;
+			assign M_PCplus8_32bit =  32'h0000 || M_PCplus8;
 
 			// input section //
 
@@ -371,8 +374,8 @@ module top ( clk,
 	// Hazard Detection Unit
 	HDU HDU1 ( 
 	// input
-	.ID_Rs(ID_ir[25:21]/*please fill here*/),
-	.ID_Rt(ID_ir[20:16]/*please fill here*/),
+	.ID_Rs(ID_Rs/*please fill here*/),
+	.ID_Rt(ID_Rt/*please fill here*/),
 	.EX_WR_out(EX_WR_out/*please fill here*/),
 	.EX_MemtoReg(EX_MemtoReg/*please fill here*/),
 	.EX_JumpOP(EX_JumpOP),
@@ -493,7 +496,7 @@ module top ( clk,
 	// Adder - Branch address adder
 	ADD#(pc_size) ADD_Branch ( 
 	.A(EX_PC/*please fill here*/),
-	.B(se_imm << 2/*please fill here*/),
+	.B(se_imm[17:0]/*please fill here*/),
 	.Cout(BranchAddr)
 	);
 	
@@ -501,7 +504,7 @@ module top ( clk,
 	Mux4to1#(pc_size) PC_Mux (
 	.I0(PC_add4),
 	.I1(BranchAddr),
-	.I2(/*please fill here*/),
+	.I2(enF1_data[17:0]/*please fill here*/), //How could $Rs fit in 18-bit PC ? same as line 629
 	.I3(JumpAddr),
 	.S(EX_JumpOP),
 	.out(PCin)
@@ -509,10 +512,10 @@ module top ( clk,
 	
 	//Jump control
 	Jump_Ctrl Jump_Ctrl1 (
-	.Branch(/*please fill here*/),
-    .Zero(/*please fill here*/),
-    .Jr(/*please fill here*/),
-    .Jump(/*please fill here*/),
+	.Branch(Branch/*please fill here*/),
+    .Zero(Zero/*please fill here*/),
+    .Jr(Jr/*please fill here*/),
+    .Jump(Jump/*please fill here*/),
     .JumpOP(EX_JumpOP)
 	);
 	
@@ -584,7 +587,7 @@ module top ( clk,
 	
 	// PCplus4 used for Jal
 	ADD#(pc_size) ADD_Plus4_2 ( 
-	.A(EX_PC/*please fill here*/),
+	.A(EX_PC[17:0]/*please fill here*/),
 	.B(18'd4),
 	.Cout(EX_PCplus8/*please fill here*/)
 	);
@@ -626,7 +629,7 @@ module top ( clk,
 	// Mux - select Jal or ALU result
 	Mux2to1#(data_size) Jal_RD_Select (
 	.I0(M_ALU_result/*please fill here*/),
-	.I1(M_PCplus8/*please fill here*/),
+	.I1(M_PCplus8_32bit/*please fill here*/),  //Same problem as line 500
 	.S(M_Jal/*please fill here*/),
 	.out(M_WD_out)
 	);	

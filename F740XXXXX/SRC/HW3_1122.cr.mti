@@ -58,12 +58,30 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	HDU
 
-} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/ID_EX.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/ID_EX.v
+} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/ID_EX.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/testfixture1.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IM
+-- Compiling module DM
+-- Compiling module PC
+-- Compiling module ADD
+-- Compiling module IF_ID
+-- Compiling module HDU
+-- Compiling module Controller
+-- Compiling module Registers
+-- Compiling module sign_extend
+-- Compiling module Mux2to1
 -- Compiling module ID_EX
+-- Compiling module Mux4to1
+-- Compiling module Jump_Ctrl
+-- Compiling module FU
+-- Compiling module ALU
+-- Compiling module EX_M
+-- Compiling module M_WB
+-- Compiling module top
+-- Compiling module testfixture1
 
 Top level modules:
-	ID_EX
+	testfixture1
 
 } {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/Mux4to1.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/Mux4to1.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -107,13 +125,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	M_WB
 
-} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/sign_extend.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/sign_extend.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module sign_extend
-
-Top level modules:
-	sign_extend
-
 } {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/Registers.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/Registers.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module Registers
@@ -121,12 +132,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	Registers
 
-} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/ADD.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/ADD.v
+} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/sign_extend.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/sign_extend.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module ADD
+-- Compiling module sign_extend
 
 Top level modules:
-	ADD
+	sign_extend
 
 } {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/EX_M.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/EX_M.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -135,27 +146,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	EX_M
 
-} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/top.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/top.v
+} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/ADD.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/ADD.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module PC
 -- Compiling module ADD
--- Compiling module IF_ID
--- Compiling module HDU
--- Compiling module Controller
--- Compiling module Registers
--- Compiling module sign_extend
--- Compiling module Mux2to1
--- Compiling module ID_EX
--- Compiling module Mux4to1
--- Compiling module Jump_Ctrl
--- Compiling module FU
--- Compiling module ALU
--- Compiling module EX_M
--- Compiling module M_WB
--- Compiling module top
 
 Top level modules:
-	top
+	ADD
 
 } {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/FU.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/FU.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
