@@ -50,7 +50,7 @@ module FU ( // input
 		
 		/* ----------------------- */
 		
-		  if(M_RegWrite && (EX_Rs == M_WR_out || EX_Rt == M_WR_out))
+		  if(M_RegWrite)// (EX_Rs == M_WR_out || EX_Rt == M_WR_out)
 		  begin
 		      if(EX_Rs == M_WR_out)
 			  begin
@@ -63,7 +63,7 @@ module FU ( // input
 				  sF2 = 0; // from M;
 			  end
 		  end
-		  else if(WB_RegWrite && (EX_Rs == WB_WR_out || EX_Rt == WB_WR_out))
+		  else if(WB_RegWrite) //(EX_Rs == WB_WR_out || EX_Rt == WB_WR_out)
 		  begin
 		      if(EX_Rs == WB_WR_out)
 			  begin

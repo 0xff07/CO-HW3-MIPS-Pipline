@@ -430,8 +430,8 @@ module top ( clk,
 	// ID Mux part
 	// Mux - select Rd or Rt
 	Mux2to1#(5) Rd_Rt ( 
-	.I0(Rt/*please fill here*/),
-	.I1(Rd/*please fill here*/),
+	.I0(Rd/*please fill here*/),
+	.I1(Rt/*please fill here*/),
 	.S(Reg_imm),
 	.out(Rd_Rt_out)
 	);
@@ -440,7 +440,7 @@ module top ( clk,
 	Mux2to1#(5) WR ( 
 	.I0(Rd_Rt_out),
 	.I1(5'd31),
-	.S(RegWrite/*please fill here*/),
+	.S(Jal/*please fill here*/),
 	.out(WR_out)
 	);
 	
