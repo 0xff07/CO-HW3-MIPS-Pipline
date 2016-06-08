@@ -93,7 +93,7 @@ module Controller ( opcode,
 			    RegWrite =  1; /* write enable signal */
 			end
 			6'b10_1010 : begin 
-				Branch	 = 1;/* write enable signal */
+				Branch	 = 0;/* write enable signal */
 				ALUOp	 = op_slt; /* write operation code  */
 				RegWrite = 1;/* write enable signal */
 			end
@@ -123,16 +123,16 @@ module Controller ( opcode,
 		end
 		6'b00_1010 : begin // slti
 			Reg_imm	 = imm_data;
-		      ALUOp	 = op_sub/* write operation code  */;
+		      ALUOp	 = op_slt/* write operation code  */;
 		      RegWrite = 1/* write enable signal */;
 		end
 		6'b00_0100 : begin // beq
 			  Branch = 1/* write branch signal */;
-			  ALUOp	 = op_sub/* write operation code  */;
+			  ALUOp	 = op_beq/* write operation code  */;
 		end
 		6'b00_0101 : begin // bne
 			  Branch = 1/* write branch signal */;
-          ALUOp	 = op_sub/* write operation code  */;
+          ALUOp	 = op_bne/* write operation code  */;
 		end
 		6'b10_0011 : begin // lw
 			Reg_imm	 = imm_data;

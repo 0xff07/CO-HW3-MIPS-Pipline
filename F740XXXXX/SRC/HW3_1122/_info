@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/Users/modelsim/Desktop/HW3/CO_2016_HW3_v5/F740XXXXX/SRC
 vADD
-Z0 !s110 1465326103
+Z0 !s110 1465375778
 !i10b 1
 !s100 Gz;CC6M6cCzO1]e79VBeK2
 Ie<eV1>Vaf=>8gGVb7K_SJ2
@@ -23,7 +23,7 @@ Z3 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z4 !s108 1465326103.000000
+Z4 !s108 1465375778.000000
 Z5 !s107 M_WB.v|EX_M.v|ALU.v|FU.v|Jump_Ctrl.v|Mux4to1.v|ID_EX.v|Mux2to1.v|sign_extend.v|Registers.v|Controller.v|HDU.v|IF_ID.v|ADD.v|PC.v|top.v|DM.v|IM.v|//VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/testfixture1.v|
 Z6 !s90 -reportprogress|300|-work|HW3_1122|-stats=none|//VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/testfixture1.v|
 !s101 -O0
@@ -31,13 +31,13 @@ Z6 !s90 -reportprogress|300|-work|HW3_1122|-stats=none|//VBOXSVR/Win7_Share/CO_2
 Z7 o-work HW3_1122 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 n@a@d@d
 vALU
-Z8 !s110 1465326104
+R0
 !i10b 1
 !s100 M`l_SX7R4@Jb6cLzPZGdn2
 IY[U7HCg?NBikXa[PL:^Vd3
 R1
 R2
-Z9 w1462109102
+Z8 w1462109102
 8ALU.v
 FALU.v
 L0 3
@@ -55,11 +55,11 @@ n@a@l@u
 vController
 R0
 !i10b 1
-!s100 A<XHR_65oAN^2SUk8@2f_2
-IdmOX<?2>AE?E4CHGG`DiB3
+!s100 QLCUdnEAkk1H4BB3a0N040
+I07UnD1fEA7Jc71FAYz3no1
 R1
 R2
-w1465306399
+w1465375376
 8Controller.v
 FController.v
 L0 3
@@ -81,7 +81,7 @@ R0
 I2nR4zNf8Zai9T4TThSSnc1
 R1
 R2
-R9
+R8
 8DM.v
 FDM.v
 L0 3
@@ -97,13 +97,13 @@ R6
 R7
 n@d@m
 vEX_M
-R8
+R0
 !i10b 1
 !s100 082z]LKe65Y1NN:AHQXc82
 I3UT<7ZScU_KSkn5Di1m@`0
 R1
 R2
-R9
+R8
 8EX_M.v
 FEX_M.v
 L0 3
@@ -119,7 +119,7 @@ R6
 R7
 n@e@x_@m
 vFU
-R8
+R0
 !i10b 1
 !s100 @;H_AninIC4BD<`?3]4_a3
 Iz_LjodIE?Faz972cImS9l1
@@ -169,7 +169,7 @@ R0
 INRJ1?OB]i=Em7VRBW8EcP0
 R1
 R2
-R9
+R8
 8ID_EX.v
 FID_EX.v
 L0 3
@@ -191,7 +191,7 @@ R0
 INkQZz4YjzB>DEa:;8i:C>1
 R1
 R2
-R9
+R8
 8IF_ID.v
 FIF_ID.v
 L0 3
@@ -213,7 +213,7 @@ R0
 Ib7]>86;ASTj4=NVnHG9z_2
 R1
 R2
-R9
+R8
 8IM.v
 FIM.v
 L0 3
@@ -235,7 +235,7 @@ R0
 IIMTiX=OLi]FVQ;TI>3N6N0
 R1
 R2
-R9
+R8
 8Jump_Ctrl.v
 FJump_Ctrl.v
 L0 3
@@ -251,13 +251,13 @@ R6
 R7
 n@jump_@ctrl
 vM_WB
-R8
+Z9 !s110 1465375779
 !i10b 1
 !s100 bWAzLz5PM8^O317?=TUVk2
 ICK;3DAX:4k=[gQAFaC[]41
 R1
 R2
-R9
+R8
 8M_WB.v
 FM_WB.v
 L0 3
@@ -279,7 +279,7 @@ R0
 I>6V8C1U>FQlkc`AlmoZFH1
 R1
 R2
-R9
+R8
 8Mux2to1.v
 FMux2to1.v
 L0 3
@@ -301,7 +301,7 @@ R0
 I9zkaBR`FPReZ<_CK4@<F[3
 R1
 R2
-R9
+R8
 8Mux4to1.v
 FMux4to1.v
 L0 3
@@ -323,7 +323,7 @@ R0
 I2bI99dRG0QmOhSZTmnZmK2
 R1
 R2
-R9
+R8
 8PC.v
 FPC.v
 L0 3
@@ -345,7 +345,7 @@ R0
 I:6h:a4>J0geC7g6Ol`go53
 R1
 R2
-R9
+R8
 8Registers.v
 FRegisters.v
 L0 3
@@ -367,7 +367,7 @@ R0
 I;Te6Oe;Z2Rc7miR3h23KH2
 R1
 R2
-R9
+R8
 8sign_extend.v
 Fsign_extend.v
 L0 3
@@ -382,7 +382,7 @@ R6
 !i113 1
 R7
 vtestfixture1
-R8
+R9
 !i10b 1
 !s100 V2MHYnCgLETUfkTO3e[Wi3
 I>Ce3Nc=XlCb?j70dEUkQ32
@@ -403,13 +403,13 @@ R6
 !i113 1
 R7
 vtop
-R8
+R9
 !i10b 1
-!s100 n_GCMdb]m`D[7jfML7o393
-I6S60<T00eRVhh1`SZV?`L2
+!s100 fodzd1@<k0M;eMFn[z]ZW1
+Io:1fhiOc@59;iNmzPmUPc3
 R1
 R2
-w1465326065
+w1465374525
 8top.v
 Ftop.v
 L0 26

@@ -282,7 +282,7 @@ module top ( clk,
       		wire [4:0] WB_WR_out;
 
 			wire [data_size-1:0] M_PCplus8_32bit;
-			assign M_PCplus8_32bit =  32'h0000 || M_PCplus8;
+			assign M_PCplus8_32bit =  32'h00000000 || M_PCplus8;
 
 			// input section //
 
@@ -331,7 +331,7 @@ module top ( clk,
 	assign JumpAddr		 = {Instruction[15:0],2'b0};/*please fill here*/
 	
 		// Data Memory
-	assign DM_Address	 = M_ALU_result[17:2];/*please fill here*/
+	assign DM_Address	 = M_ALU_result[15:0];/*please fill here*/ ////
 	assign DM_enable	 = MemWrite;/*please fill here*/
 	assign DM_Write_Data = Rt_data;/*please fill here*/
 	
