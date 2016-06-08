@@ -135,13 +135,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	ADD
 
-} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/FU.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/FU.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module FU
-
-Top level modules:
-	FU
-
 } {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/top.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/top.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module PC
@@ -163,5 +156,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	top
+
+} {} {}} //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/FU.v {1 {vlog -work HW3_1122 -stats=none //VBOXSVR/Win7_Share/CO_2016_HW3_v5/F740XXXXX/SRC/FU.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module FU
+
+Top level modules:
+	FU
 
 } {} {}}

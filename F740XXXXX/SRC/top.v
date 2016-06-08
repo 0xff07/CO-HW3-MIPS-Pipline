@@ -69,8 +69,8 @@ module top ( clk,
 	  		wire ID_Flush;
 	
 			//input section //
-			wire [4:0] ID_Rs;
-			wire [4:0] ID_Rt;
+			wire [4:0] ID_Rs = ID_ir[25:21];
+			wire [4:0] ID_Rt = ID_ir[20:16];
 			//wire [4:0] EX_WR_out;
 			//wire EX_MemtoReg;
 			//wire [1:0] EX_JumpOP;
@@ -143,24 +143,24 @@ module top ( clk,
 			//wire ID_Flush;
 	
 			// WB
-			wire ID_MemtoReg;
-			wire ID_RegWrite;
+			wire ID_MemtoReg = MemtoReg;
+			wire ID_RegWrite = RegWrite;
 			// M
-			wire ID_MemWrite;
-			wire ID_Jal;
+			wire ID_MemWrite = MemWrite;
+			wire ID_Jal = Jal;
 			// EX
-			wire ID_Reg_imm;
-			wire ID_Jump;
-			wire ID_Branch;
-			wire ID_Jr;		
+			wire ID_Reg_imm = Reg_imm;
+			wire ID_Jump = Jump;
+			wire ID_Branch = Branch;
+			wire ID_Jr = Jr;		
 			// pipe
     	    //wire [pc_size-1:0] ID_PC;
-    		wire [3:0] ID_ALUOp;
-    		wire [4:0] ID_shamt;
-    		wire [data_size-1:0] ID_Rs_data;
-    		wire [data_size-1:0] ID_Rt_data;
-    		wire [data_size-1:0] ID_se_imm;
-    		wire [4:0] ID_WR_out;
+    		wire [3:0] ID_ALUOp = ALUOp;
+    		wire [4:0] ID_shamt = shamt;
+    		wire [data_size-1:0] ID_Rs_data = Rs_data;
+    		wire [data_size-1:0] ID_Rt_data = Rt_data;
+    		wire [data_size-1:0] ID_se_imm = se_imm;
+    		wire [4:0] ID_WR_out = WR_out;
     		//wire [4:0] ID_Rs;
     		//wire [4:0] ID_Rt;
 			// end input section //
@@ -331,7 +331,7 @@ module top ( clk,
 	assign JumpAddr		 = {Instruction[15:0],2'b0};/*please fill here*/
 	
 		// Data Memory
-	assign DM_Address	 = M_ALU_result[15:0];/*please fill here*/ ////
+	assign DM_Address	 = M_ALU_result[17:2];/*please fill here*/ ////
 	assign DM_enable	 = MemWrite;/*please fill here*/
 	assign DM_Write_Data = Rt_data;/*please fill here*/
 	
@@ -372,11 +372,16 @@ module top ( clk,
 	// ID
 	/*-----------------------------------------------------------*/	
 	// Hazard Detection Unit
+    
+    
+
+
 	HDU HDU1 ( 
 	// input
-	.ID_Rs(ID_Rs/*please fill here*/),
-	.ID_Rt(ID_Rt/*please fill here*/),
-	.EX_WR_out(EX_WR_out/*please fill here*/),
+    
+	.ID_Rs(ID_Rs/*please fill here*/),//
+	.ID_Rt(ID_Rt/*please fill here*/),//
+	.EX_WR_out(EX_WR_out/*please fill here*/),//
 	.EX_MemtoReg(EX_MemtoReg/*please fill here*/),
 	.EX_JumpOP(EX_JumpOP),
 	// output
