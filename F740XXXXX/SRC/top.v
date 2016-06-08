@@ -176,7 +176,7 @@ module top ( clk,
 	
     		// input section //
 			//wire Branch;
-    		wire Zero;
+    		//wire Zero;
     		//wire Jr;
     		//wire Jump;
 			wire [1:0] JumpOP;
@@ -213,7 +213,7 @@ module top ( clk,
 
 			//input section//
 			//wire [3:0] ALUOp;
-			wire [data_size-1:0] scr1;
+			     //wire [data_size-1:0] scr1 = enF1_data;
 			//wire [data_size-1:0] scr2;
 			//wire [4:0] shamt;
 
@@ -290,7 +290,7 @@ module top ( clk,
     		//wire M_MemtoReg;	
     		//wire M_RegWrite;	
 			// pipe
-    		wire [data_size-1:0] M_DM_Read_Data;
+    		wire [data_size-1:0] M_DM_Read_Data = DM_Read_Data;
     		//wire [data_size-1:0] M_WD_out;
     		//wire [4:0] M_WR_out;
 
@@ -518,7 +518,7 @@ module top ( clk,
 	//Jump control
 	Jump_Ctrl Jump_Ctrl1 (
 	.Branch(Branch/*please fill here*/),
-    .Zero(Zero/*please fill here*/),
+    .Zero(EX_Zero/*please fill here*/),
     .Jr(Jr/*please fill here*/),
     .Jump(Jump/*please fill here*/),
     .JumpOP(EX_JumpOP)
@@ -583,7 +583,7 @@ module top ( clk,
 	
 	ALU ALU1 ( 
 	.ALUOp(ALUOp/*please fill here*/),
-	.scr1(scr1/*please fill here*/),
+	.scr1(enF1_data/*please fill here*/),
 	.scr2(scr2),
 	.shamt(shamt/*please fill here*/),
 	.ALU_result(EX_ALU_result),

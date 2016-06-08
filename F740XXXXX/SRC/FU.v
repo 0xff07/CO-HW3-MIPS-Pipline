@@ -76,6 +76,13 @@ module FU ( // input
 			      sF2 = 1;  //From WB, Exact value unknown;
 			  end
 		  end
+		  else 
+	  	  begin
+				  enF1 = 0;
+				  sF1 = 0;
+				  enF2 = 0;
+				  sF2 = 0;
+		  end		
 	
 		
 		
